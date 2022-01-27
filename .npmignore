@@ -1,0 +1,16 @@
+# 忽略目录
+examples/
+pulic/
+packages/
+src/
+build/
+node_modules/
+public/
+pnpm-lock.yaml
+.vscode/
+# 忽略文件
+vue.config.js
+index.html
+vite.config.js
+
+
