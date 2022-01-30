@@ -1,29 +1,43 @@
 
 <template>
-  <div class="button-wrapper">
-    <t-button @click="handleClick">基础使用</t-button>
-    <t-button color="#f2c97d">换种颜色</t-button>
-  </div>
+ <div class="button-wrapper">
+   <Preview comp-name="Button" demo-name="base" moduleName="基础">
+     <base-use />
+  </Preview>
+    <Preview comp-name="Button" demo-name="size" moduleName="尺寸">
+      <size />
+    </Preview>
+    <Preview comp-name="Button" demo-name="disable" moduleName="禁用">
+      <disable />
+    </Preview>
+ </div>
 </template>
+ 
+<script>
+import Preview from '@/components/Preview.vue'
+import BaseUse from './base.vue'
+import Size from './size.vue'
+import Disable from './disable.vue'
 
-<script >
 export default {
-  name: 'Index',
-  setup(props) {
-    const handleClick = () => {
-      alert('有基佬开我裤链')
-    }
-    return {
-      handleClick
-    }
+  components: {
+    Preview,
+    BaseUse,
+    Size,
+    Disable
+  },
+  setup(){
+
   }
-}
+ 
+ }
+
 </script>
-<style lang="less">
+ 
+<style scoped lang = "less">
 .button-wrapper{
-  display:flex;
-  .t-button {
-    margin: 10px;
+   :deep(.t-button) {
+    margin-right: 10px;
   }
 }
 

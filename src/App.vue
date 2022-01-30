@@ -1,7 +1,7 @@
 <!--
  * @Author: yuguangzhou
  * @Date: 2022-01-19 11:29:41
- * @LastEditTime: 2022-01-26 16:34:05
+ * @LastEditTime: 2022-01-28 15:09:52
  * @LastEditors: yuguangzhou
  * @Description: 
 -->
@@ -28,7 +28,7 @@ import AppHeader from '@/components/AppHeader.vue';
 import AppSideBar from '@/components/AppSideBar.vue';
 import { reactive,defineComponent,onMounted,ref,computed, getCurrentInstance, nextTick } from 'vue'
 import config from '@/config'
-import { setThemes } from './utils/setTheme';
+import { setThemes,getBrowserThemes } from './utils/setTheme';
 import { setItem } from '@/utils/storage'
 
 export default defineComponent({
@@ -38,7 +38,7 @@ export default defineComponent({
     AppHeader
   },
   setup({props}) {
-    const currentThemes = ref('darkThemes')
+    const currentThemes =ref(getBrowserThemes()) 
     const asideVisible = ref(true)
     onMounted( async () => {
       setThemes(config,currentThemes.value)
@@ -93,9 +93,9 @@ export default defineComponent({
   }
 .tracer-doc{
 .app-main {
+  min-height: calc(100vh - 60px);
   transition: all 250ms ease;
   display: flex;
-  min-height: calc(100vh - 60px);
   .aside{
       transition: all 250ms ease;
   }

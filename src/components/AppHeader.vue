@@ -1,4 +1,5 @@
 
+
 <template>
     <div class="tracer-doc-header">
         <div class="tracer-doc-header_left">
@@ -25,7 +26,6 @@ export default {
  setup(props) {
     const title=get(config,'title')
     const currentThemes =ref(getBrowserThemes()) 
-    console.log(currentThemes.value);
     const toggleTheme=()=>{
         currentThemes.value = currentThemes.value === 'darkThemes' ? 'themes' : 'darkThemes'
         console.log(currentThemes.value);

@@ -2,14 +2,20 @@
 
 <template>
   <div class="doc-preview">
+      <div  class="preview-toolbar">
+      <h3   class="preview-toolbar_desc">{{moduleName}}</h3>
+      <span class="preview-toolbar_btn" >
+      <span v-clipboard:copy="previewSourceCode" 
+      v-clipboard:success="onSuccess"
+      >复制代码</span>
+      <span @click="showSourceCode">查看代码</span>  
+      </span>
+    </div>
     <section>
       <slot></slot>
     </section>
     <div v-show="codeVisible" class="source-code">
       <pre class="language-html"><code class="language-html">{{ previewSourceCode }}</code></pre>
-    </div>
-    <div class="preview-bottom">
-      <span name="code" @click="showSourceCode">查看代码</span>
     </div>
   </div>
 </template>
@@ -18,7 +24,6 @@
 
 
 const isDev = import.meta.env.MODE === 'development';
-
 export default {
   props: {
     /** 组件名称 */
@@ -29,6 +34,12 @@ export default {
     },
     /** 要显示代码的组件 */
     demoName: {
+      type: String,
+      default: '',
+      require: true,
+    },
+    /**模块名称 */
+    moduleName: {
       type: String,
       default: '',
       require: true,
@@ -67,6 +78,9 @@ export default {
     showSourceCode() {
       this.codeVisible = !this.codeVisible;
     },
+    onSuccess() {
+      alert('复制成功')
+    },
   },
 };
 </script>
@@ -77,9 +91,11 @@ pre {
 }
 .doc-preview {
   border: 4px;
-  border: 1px dashed var(--doc-color-border);
+  border: 1px solid var(--doc-color-border);
   padding: 10px;
-  border-bottom: 1px dashed var(--doc-color-border);
+  border-radius: 4px;
+  border-bottom: 1px solid var(--doc-color-border);
+  margin: 20px 0;
   section {
     margin: 15px 0px;
   }
@@ -90,14 +106,27 @@ pre {
   margin: 0;
   padding: 0 15px;
 }
-.preview-bottom {
+.preview-toolbar {
+
   cursor: pointer;
   height: 40px;
   line-height: 40px;
   display: flex;
-  color: var(--doc-color-text);
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  border-top: 1px dashed var(--doc-color-border);
+  border-bottom: 1px solid var(--doc-color-border);
+  padding-bottom: 10px;
+  user-select: none;
+  .preview-toolbar_desc{
+    color: var(--doc-color-text);
+    
+  }
+  .preview-toolbar_btn{
+    color: var(--doc-color-primary);
+    span{
+      margin: 0 10px;
+    }
+  }
 }
+
 </style>
