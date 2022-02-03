@@ -26,7 +26,7 @@ createApp(App).use(Button).mount('#app')
 ## 单文件组件中直接使用
 
 
-```html
+```vue
 <template>
   <t-button>tracer-ui</t-button>
 </template> 
