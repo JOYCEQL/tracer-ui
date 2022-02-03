@@ -1,19 +1,14 @@
 
-
 <script setup>
-import demo from '../example/index.vue'
+import index from '../example/index.vue'
 </script>
 
 # 按钮
 
 
-### 基本使用
+## 演示
 
-<Preview comp-name="Button" demo-name="index">
-  <demo />
-</Preview>
-
-
+<index />
 
 
 
@@ -23,7 +18,12 @@ import demo from '../example/index.vue'
 
 | 参数 | 说明 | 类型 | 默认值 | 
 | --- | --- | --- | --- | 
-| `color` | 按钮颜色 | _string_ | `default` |
+| `color` | 按钮颜色 | _string_ | `null` |
+| `type` | 按钮类型 | `'default' \| 'primary' \|'success'\|'info'\|'warning'\|'error'`|`default`
+| `size` | 按钮尺寸 | `'default' \| 'large' \|'small'`| `default` |
+| `round` | 是否为圆角 | _boolean_ | `false`|
+| `circle` | 是否为圆形| _boolean_ | `false`|
+| `disabled` | 是否禁用| _boolean_ | `false`|
 
 ### 事件
 
