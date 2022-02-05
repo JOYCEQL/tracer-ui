@@ -13,7 +13,6 @@ createApp(App).use(tracer).mount('#app')
 ```
 
 ## 按需引入
-实际上这里的按需引入单指css
 ```js
 //main.js
 import { createApp } from 'vue'
@@ -26,7 +25,7 @@ createApp(App).use(Button).mount('#app')
 ## 单文件组件中直接使用
 
 
-```html
+```vue
 <template>
   <t-button>tracer-ui</t-button>
 </template> 
