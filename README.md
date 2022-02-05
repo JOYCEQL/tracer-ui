@@ -13,7 +13,6 @@ createApp(App).use(tracer).mount('#app')
 ```
 
 ## 按需引入
-实际上这里的按需引入单指css
 ```js
 //main.js
 import { createApp } from 'vue'
