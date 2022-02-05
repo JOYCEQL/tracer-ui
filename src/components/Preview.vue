@@ -64,7 +64,8 @@ export default {
           await import(/* @vite-ignore */ `../../packages/${this.compName}/example/${this.demoName}.vue?raw`)
         ).default;
       } else {
-        this.sourceCode = await fetch(`/packages/${this.compName}/example/${this.demoName}.vue`).then((res) => res.text());
+        // packages前加上仓库名，解决404
+        this.sourceCode = await fetch(`/web-doc/packages/${this.compName}/example/${this.demoName}.vue`).then((res) => res.text());
       }
     }
     await this.$nextTick();
