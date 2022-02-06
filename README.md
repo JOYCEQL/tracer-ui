@@ -1,6 +1,14 @@
 # Tracer-UI
 
-
+## 安装
+```shell
+  //npm
+  npm install tracer-ui
+  //yarn
+  yarn add tracer-ui
+  //pnpm
+  pnpm install tracer-ui
+```
 ## 全量引入
 
 ```js
