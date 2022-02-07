@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite --config ./build/base.config.js --host",
     "build": "vite build",
-    "build:all": "pnpm build:lib && pnpm build:themes ",
+    "build:all": " pnpm build:doc && pnpm build:lib && pnpm build:themes ",
     "build:doc": " vite build --config ./build/doc.config.js",
     "build:lib": "vite build --config ./build/lib.config.js",
     "preview": "vite preview",

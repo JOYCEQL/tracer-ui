@@ -1,6 +1,5 @@
 rm -rf docs &&
-yarn build:doc &&
-yarn build:lib &&
+pnpm build:all &&
 cd docs &&
 git init &&
 git add . &&
