@@ -22,6 +22,10 @@ createApp(App).use(tracer).mount('#app')
 
 ## 按需引入
 
+安装babel-plugin-tracer
+```js
+  yarn add  babel-plugin-tracer -D 
+```
 在 **babel.config.js** 中添加配置
 ```js
 module.exports = {
