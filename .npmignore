@@ -8,9 +8,11 @@ node_modules/
 public/
 pnpm-lock.yaml
 .vscode/
+.idea/
+dist/
+docs/
 # 忽略文件
 vue.config.js
 index.html
 vite.config.js
-
-
+deploy.sh
