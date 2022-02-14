@@ -1,5 +1,3 @@
-
-
 # Tracer UI
 
 Tracer UI 是一个 Vue3 的PC端组件库。
@@ -16,6 +14,6 @@ Tracer UI 是一个 Vue3 的PC端组件库。
 
 ## 说明
 
-项目中vue的版本不可以低于该组件库中的版本，否则会出现插槽(slot)api相关的报错。
+项目中vue的版本不可以低于该组件库中所依赖的vue版本，否则会出现插槽(slot)api相关的报错。
 
 

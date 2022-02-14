@@ -1,10 +1,4 @@
-<!--
- * @Author: yuguangzhou
- * @Date: 2022-01-26 14:02:55
- * @LastEditTime: 2022-02-07 11:54:48
- * @LastEditors: Please set LastEditors
- * @Description: 
--->
+
 <script setup>
 import {onMounted} from 'vue'
 import Prism from 'prismjs';
@@ -29,7 +23,10 @@ createApp(App).use(tracer).mount('#app')
 ```
 
 ## 按需引入
-
+安装**babel-plugin-tracer**插件
+```shell
+  pnpm install babel-plugin-tracer -D
+```
 在 **babel.config.js** 中添加配置
 ```js
 module.exports = {
