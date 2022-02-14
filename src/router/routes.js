@@ -1,8 +1,8 @@
 /*
  * @Author: yuguangzhou
  * @Date: 2022-01-19 14:47:49
- * @LastEditTime: 2022-01-26 16:21:07
- * @LastEditors: yuguangzhou
+ * @LastEditTime: 2022-02-13 20:48:04
+ * @LastEditors: Please set LastEditors
  * @Description: 
  */
 
@@ -10,6 +10,7 @@ import Introduce from '@/docs/introduce.md'
 import Install from '@/docs/install.md'
 import Use from '@/docs/use.md'
 import Button from '/packages/Button/docs/zh-CN.md'
+import Switch from '/packages/Switch/docs/zh-CN.md'
 
 
 // export default [
@@ -73,6 +74,17 @@ export default {
         "compClassName": "button",
       },
       component: Button,
-    }
+    },
+    {
+
+      title: '开关',
+      name: 'switch',
+      path: '/components/switch',
+      meta:{
+        "compZhName": "开关",
+        "compClassName": "switch",
+      },
+      component: Switch,
+    },
   ],
 };
